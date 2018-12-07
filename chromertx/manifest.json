@@ -1,0 +1,32 @@
+{
+    "name": "IYBY",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "粗暴更改页面背景色,简单去除csdn的广告位置(默认打开csdn站点就会执行)",
+    "permissions": [
+        "tabs",
+        "storage",
+        "webNavigation",
+        "notifications",
+        "activeTab",
+        "cookies",
+        "http://*/*",
+        "https://*/*"
+      ],
+    "browser_action": {
+        "default_icon": "./image/1.png",
+        "default_title": "更改选项",
+        "default_popup": "popup.html"
+    },
+    "background":{
+        "scripts":["js/main.js"],
+        "persistent":false
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["./js/jquery.min.js","js/content.js"],
+        "run_at":"document_end"
+    }],
+    "content_security_policy": "script-src 'self' 'unsafe-eval' https://sapi.k780.com/; object-src 'self'"
+        
+}

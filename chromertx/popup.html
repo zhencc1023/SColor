@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0px;
+            padding: 0px;
+            background: white;
+        }
+        /* div {
+        text-align: center;
+        padding: 1px 3px;
+        font: menu;
+        width: 100px;
+        margin-top: 1px;
+        background: #cccccc;
+    }
+
+    div:hover {
+        background: #aaaaaa;
+    } */
+
+      
+        /* #green {
+        border: 1px solid green;
+        color: green;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+
+    #yellow {
+        border: 1px solid yellow;
+        border-radius: 2px;
+        color: yellow;
+        cursor: pointer;
+    } */
+        .context {
+            width: 220px;
+            height: 220px;
+            background-color: #f3f8e3;
+        }
+        .position{
+            text-align: center;
+            margin-top: 3px;
+        }
+        .pp{
+            font-size: 11px;
+            font-family: cursive;
+            margin-bottom: 4px;
+            padding-left: 12px; 
+           padding-right: 12px; 
+        }
+        .showText{
+            display: none;
+            color: red;
+        }
+        .colspick{
+            left: 10px !important;
+            top:178px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="color/css/colpick.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="color/js/colpick.js"></script>
+</head>
+
+<body class="container">
+    <div class="context">
+        <section>
+            <div class="position" role="group">
+                <span class="pp">---更改背景色---</span>
+                <button id="green" type="button" class="btn btn-success" style="margin-bottom: 8px">会上头的绿色</button>
+                <button id="yellow" type="button" class="btn btn-warning">带味道的黄色</button>
+                <div class="row">
+                    <span class="pp">---输入或选择你的颜色--</span>
+                <div class="col-lg-6">
+                    <button type="button" class="btn btn-default btn-xs" id="openColor">选择器</button>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="showRgb" placeholder="类:#efs232...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="goToAc">Go!</button>
+                        </span>
+                    </div><!-- /input-group -->
+                </div><!-- /.col-lg-6 -->
+            </div><!--/row-->
+            <div class="showText"><span class="pp"></span></div>
+            </div>
+        </section>
+    </div>
+    <script src="js/popup.js"></script>
+</body>
