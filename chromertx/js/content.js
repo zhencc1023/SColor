@@ -38,10 +38,8 @@ var  clear={
         var self=this;
         switch (localStr) {
             case "https://blog.csdn.net":
-                var classArr=['csdn-tracking-statistics','asideFooter']
-                self.remove(classArr,'Class');
-                self.remove(classArr,'Id');
-                self.remove('newsfeed','Tag');
+                var classArr=['aside iframe','main iframe','main newsfeed']
+                self.remove(classArr,'Tag');
                 break;
         
             default:
